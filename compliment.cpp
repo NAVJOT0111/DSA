@@ -8,6 +8,11 @@ int main(){
     m = n;
     int mask = 0;
 
+    if(n == 0){
+        cout << 0 << endl;
+        return 0; 
+    }
+
     while(m){
         mask = (mask << 1) | 1;
         m = m >> 1;
