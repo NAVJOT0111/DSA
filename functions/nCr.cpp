@@ -24,3 +24,5 @@ int main(){
         cout << "Invalid input: r cannot be greater than n." << endl;
     } 
 }
+
+// cout << typeid(a.bool).name() << "\n";
