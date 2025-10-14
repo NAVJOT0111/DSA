@@ -1,5 +1,6 @@
 #include <stdio.h>
-#include <stlib.h>
+#include <stdlib.h>
+
 
 typedef struct Node{
     int data;
@@ -8,4 +9,6 @@ typedef struct Node{
 
 int main(){
     Node *head = (Node*)malloc(sizeof(Node));
+    head-> data = 0;
+    head-> next = NULL;
 }
