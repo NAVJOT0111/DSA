@@ -119,6 +119,7 @@ void quickSort(vector<int>& arr, int low, int high) {
         quickSort(arr, pivotIndex + 1, high);
     }
 }
+
 int partition(vector<int>& arr, int low, int high) {
     // Choose the last element as pivot
     int pivot = arr[high];
@@ -132,17 +133,16 @@ int partition(vector<int>& arr, int low, int high) {
         if (arr[j] <= pivot) {
             // Increment i and swap with j
             i++;
-            swap(arr[i], arr[j]);
+            swap(arr[i], arr[j]); 
             //“Okay, I found a new smaller element, so my ‘small zone’ grows by 1”
         }
     }
-    // Place pivot in correct position
+    // Place pivot in correct position  Pivot must sit between smaller and larger elements.
     swap(arr[i + 1], arr[high]);
 
     // Return pivot index
     return i + 1;
 }
-
 
 int main(){
     vector <int> arr = {3,5,4,1,2};
